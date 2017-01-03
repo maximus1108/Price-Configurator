@@ -1,0 +1,40 @@
+[{
+  "uicomponents": [
+    "accordion",
+    "contentcontainer"
+  ],
+  "pages": [{
+      "heading": "Configurator",
+      "body":[{
+        "type": "accordion",
+        "heading": "/standard features",
+        "text": "",
+        "children": [{
+            "type": "contentcontainer",
+            "heading": "/language(s)",
+            "text": "",
+            "children": []
+        },{
+            "type": "contentcontainer",
+            "heading": "/course duration",
+            "text": "",
+            "children": []
+        }]
+      },{
+        "type": "accordion",
+        "heading": "/structure & functionality",
+        "text": "",
+        "children": [{
+            "type": "contentcontainer",
+            "heading": "/questions",
+            "text": "",
+            "children": []
+        },{
+            "type": "contentcontainer",
+            "heading": "/navigation",
+            "text": "",
+            "children": []
+        }]
+      }]
+  }]
+}]

@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	<body>
+		<div id='wrapper' data-bind="foreach: $root.components">
+			<div data-bind="component: htmlNodes()"></div>
+		</div>
+	</body>
+	<!--<script type='text/javascript' src='js/libs/knockout-3.4.1.js'></script>
+	<script type='text/javascript' src='js/libs/master-vm.js'></script>-->
+	<script data-main="assets/js/main.js" type="text/javascript" src="assets/js/libs/require.js"></script>
+</html>
