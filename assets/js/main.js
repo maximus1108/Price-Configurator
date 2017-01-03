@@ -7,7 +7,8 @@ requirejs.config({
 		css: 'libs/require/css',
 		normalize: "libs/require/normalize",
 		application: "core/application",
-		mastervm: "core/mastervm"
+		mastervm: "core/mastervm",
+		pagevm: "core/pagevm"
 	},
 });
 

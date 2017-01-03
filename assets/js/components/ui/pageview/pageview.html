@@ -1,1 +1,3 @@
-<div class="pageview" data-bind="text: props.name"></div>
+<div style="background: blue" class="pageview" data-bind="foreach: components, click: clicktest">
+    <div data-bind="component: component"></div>
+</div>
