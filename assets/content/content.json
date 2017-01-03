@@ -1,8 +1,11 @@
 [{
-  "uicomponents": [
-    "accordion",
-    "contentcontainer"
-  ],
+  "components": {
+	"ui": ["pageview"],
+	"fragments": [
+		"accordion",
+		"contentcontainer"  
+	]
+  },
   "pages": [{
       "heading": "Configurator",
       "body":[{

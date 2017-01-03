@@ -3,34 +3,20 @@ requirejs.config({
 	paths:{
 		jquery: 'libs/jquery',
 		knockout: "libs/knockout",
-		text: "libs/text",
-		content: "core/content",
+		text: "libs/require/text",
+		css: 'libs/require/css',
+		normalize: "libs/require/normalize",
+		application: "core/application",
 		mastervm: "core/mastervm"
 	},
 });
 
 requirejs(
-	["jquery", "knockout", "content"],
-	function($, ko, Content){
+	["knockout", "application"],
+	function(ko, Application){
 
-		var app = new Content("assets/content/content.json");
+		var app = new Application("assets/content/content.json");
 		app.load();
 
 		console.log(app)
-
-	/*	var Compontent = function(nodes){
-			this.htmlNodes = ko.observable(nodes);
-		}
-
-
-		function MasterViewModel(){
-
-			var self = this;
-
-			self.components = ko.observableArray([new Compontent('accordion-component')]);
-
-		}
-
-		ko.applyBindings(new MasterViewModel());
-	}*/
 });
