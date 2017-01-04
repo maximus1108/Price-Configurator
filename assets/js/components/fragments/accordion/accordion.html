@@ -1,4 +1,12 @@
-<div class="section">
-		<div class="header" data-bind="text: heading"></div>
-		<div class="body"> adada</div>
+<div class="accordion">
+		<div class="header" data-bind="click: showContent">
+				<span data-bind="text: heading"></span>
+				<div class="icon">
+					<div class="left-line" data-bind="css: {active: isActive()}"></div>
+					<div class="right-line" data-bind="css: {active: isActive()}"></div>
+				</div>
+		</div>
+		<div class="body" data-bind="css: {active: isActive()}">
+			<div class="container">adada</div>
+		</div>
 </div>

@@ -10,32 +10,44 @@
       "heading": "Configurator",
       "body":[{
         "type": "accordion",
-        "heading": "/standard features",
-        "text": "",
+        "props": {
+			"heading": "/standard features",
+			 "text": ""
+		},
         "children": [{
             "type": "contentcontainer",
-            "heading": "/language(s)",
-            "text": "",
+            "props": {
+				"heading": "/language(s)",
+				"text": ""
+			},
             "children": []
         },{
             "type": "contentcontainer",
-            "heading": "/course duration",
-            "text": "",
+            "props": {
+				"heading": "/course duration",
+				"text": ""
+				},
             "children": []
         }]
       },{
         "type": "accordion",
-        "heading": "/structure & functionality",
-        "text": "",
+        "props": {
+			"heading": "/structure & functionality",
+			"text": ""
+		},
         "children": [{
             "type": "contentcontainer",
-            "heading": "/questions",
-            "text": "",
+            "props": {
+				"heading": "/questions",
+				"text": ""
+			},
             "children": []
         },{
             "type": "contentcontainer",
-            "heading": "/navigation",
-            "text": "",
+            "props": {
+				"heading": "/navigation",
+				"text": ""			
+			},
             "children": []
         }]
       }]

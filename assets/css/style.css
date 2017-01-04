@@ -1,8 +1,4 @@
-body{
-	background: red;
-}
-
-.pageview{
-	height: 40px;
-	background: green;
+*{
+	font-family: "Open Sans", Sans-Serif;
+	font-size: 14px;
 }

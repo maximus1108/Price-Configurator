@@ -1,15 +1,14 @@
 define(["knockout"],
-  function(ko){
+	function (ko) {
 
-    function PageViewModel(){
+		function PageViewModel() {
 
-      var self = this;
+			var self = this;
 
-      self.components = ko.observableArray();
+			self.components = ko.observableArray();
 
-    }
+		}
 
-    return PageViewModel;
+		return PageViewModel;
 
-  }
-)
+})
