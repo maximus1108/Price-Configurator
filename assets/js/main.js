@@ -1,14 +1,14 @@
 requirejs.config({
-	baseUrl: "assets/js",
+	baseUrl: "assets",
 	paths:{
-		jquery: 'libs/jquery',
-		knockout: "libs/knockout",
-		text: "libs/require/text",
-		css: 'libs/require/css',
-		normalize: "libs/require/normalize",
-		application: "core/application",
-		mastervm: "core/mastervm",
-		pagevm: "core/pagevm"
+		jquery: "js/libs/jquery",
+		knockout: "js/libs/knockout",
+		text: "js/libs/require/text",
+		css: 'js/libs/require/css',
+		normalize: "js/libs/require/normalize",
+		application: "js/core/application",
+		mastervm: "js/core/mastervm",
+		pagevm: "js/core/pagevm"
 	},
 });
 

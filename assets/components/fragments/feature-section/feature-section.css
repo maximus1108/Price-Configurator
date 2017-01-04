@@ -1,0 +1,7 @@
+.feature-section{
+    height: 250px;
+    width: 200px;
+    background: white;
+    border: 3px dotted #c9c9c9;
+    border-radius: 2%;
+}

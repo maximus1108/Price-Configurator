@@ -1,55 +1,55 @@
 [{
-  "components": {
-	"ui": ["pageview"],
-	"fragments": [
-		"accordion",
-		"contentcontainer"  
-	]
-  },
-  "pages": [{
-      "heading": "Configurator",
-      "body":[{
-        "type": "accordion",
-        "props": {
-			"heading": "/standard features",
-			 "text": ""
-		},
-        "children": [{
-            "type": "contentcontainer",
+    "components": {
+        "ui": ["pageview"],
+        "fragments": [
+            "accordion",
+            "feature-section"
+        ]
+    },
+    "pages": [{
+        "heading": "Configurator",
+        "body": [{
+            "type": "accordion",
             "props": {
-				"heading": "/language(s)",
-				"text": ""
-			},
-            "children": []
-        },{
-            "type": "contentcontainer",
+                "heading": "/standard features",
+                "text": "",
+                "children": [{
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/language(s)",
+                        "text": "",
+                        "children": []
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/course duration",
+                        "text": "",
+                        "children": []
+                    }
+                }]
+            }
+        }, {
+            "type": "accordion",
             "props": {
-				"heading": "/course duration",
-				"text": ""
-				},
-            "children": []
+                "heading": "/structure & functionality",
+                "text": "",
+                "children": [{
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/questions",
+                        "text": "",
+                        "children": []
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/navigation",
+                        "text": "",
+                        "children": []
+                    }
+                }]
+            }
         }]
-      },{
-        "type": "accordion",
-        "props": {
-			"heading": "/structure & functionality",
-			"text": ""
-		},
-        "children": [{
-            "type": "contentcontainer",
-            "props": {
-				"heading": "/questions",
-				"text": ""
-			},
-            "children": []
-        },{
-            "type": "contentcontainer",
-            "props": {
-				"heading": "/navigation",
-				"text": ""			
-			},
-            "children": []
-        }]
-      }]
-  }]
+    }]
 }]

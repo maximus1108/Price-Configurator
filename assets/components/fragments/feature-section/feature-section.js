@@ -1,4 +1,4 @@
-define(["knockout", "text!./content-container.html"],
+define(["knockout", "text!./feature-section.html", "css!./feature-section.css"],
 	function(ko, html, css){
 
 		function container(params){

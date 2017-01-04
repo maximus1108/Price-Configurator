@@ -7,6 +7,8 @@
 				</div>
 		</div>
 		<div class="body" data-bind="css: {active: isActive()}">
-			<div class="container">adada</div>
+			<div class="container" data-bind="foreach: components">
+				<div class="child-component" data-bind="component: component"></div>
+			</div>
 		</div>
 </div>
