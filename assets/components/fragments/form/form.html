@@ -1,0 +1,66 @@
+<div class="form" data-bind="foreach: inputs">
+
+	<div class="input-item" data-bind="css: type">
+
+		<!-- ko if: label && (label.position  == "before" || type == "select") -->
+		<label data-bind="text: label.text, css:{ floatLeft:  type == 'range' &&  label.position == 'before', floatRight:  type == 'range' &&  label.position == 'after'}, style:{ width: label.width}"></label>
+		<!-- /ko -->
+
+
+		<!-- ko if: type == "checkbox"-->
+		<input data-bind="attr: { type: type }, checked: observable"></input>
+		<!-- /ko -->
+
+		<!-- ko if: type == "radio"-->
+		<!-- ko foreach: buttons -->
+		<input type="radio" data-bind="attr: { name: $parent.name }, value: value"></input><label data-bind="text: text"></label>
+		<!-- /ko -->
+		<!-- /ko -->
+
+		<!-- ko if: type == "select" -->
+		<!-- ko foreach: observable.list-->
+		<div class="additions">
+			<div data-bind="text: item" ></div>
+			<button class="remove" data-bind="click: $parent.removeFromList">
+			<svg height="15" width="15">
+				<line x1="0" y1="7.5"" x2="15" y2="7.5"" style="stroke: white; stroke-width:3;" />
+			</svg>
+			</button>
+		</div>
+		<!-- /ko -->
+		<button  data-bind="click: addToList, visible: observable.options().length > 0">
+			<svg height="15" width="15">
+				<line x1="7.5" y1="0" x2="7.5" y2="15" style="stroke: white; stroke-width:3;" />
+				<line x1="0" y1="7.5"" x2="15" y2="7.5"" style="stroke: white; stroke-width:3;" />
+			</svg>
+		</button>
+		<span class="inputContainer">
+			<select data-bind="options: observable.options, optionsCaption: 'Select an item', value: observable.value, visible: observable.options().length > 0"></select>
+		</span>
+		<!-- /ko-->
+
+		<!-- ko if: type == "range" -->
+		<!-- ko if: title-->
+		<span class="title" data-bind="text: title"></span>
+		<!-- /ko -->
+		<div>
+			<!-- ko if: label  -->
+			<label data-bind="text: label.text, css:{ floatLeft: label.position == 'before', floatRight: label.position == 'after'}, style:{ width: label.width}"></label>
+			<!-- /ko -->
+			<span class="inputContainer">
+				<input data-bind="attr: { type: type, max: max, min: min, step: step}, value: observable, valueUpdate: 'input'"></input>
+			</span>
+		</div>
+		<!-- /ko -->
+
+		<!-- ko if: type == "textarea" -->
+		<textarea data-bind="css: {disableResize: resizeable }, value: observable, valueUpdate: 'input'"></textarea>
+		<!-- /ko -->
+
+		<!-- ko if: label && label.position == "after" && type != "range" && type != "select"-->
+		<label data-bind="text: label.text"></label>
+		<!-- /ko -->
+	</div>
+</div>
+
+<!--<div style="height:50px; width:100px; background:red;" data-bind="text: costs"></div>-->

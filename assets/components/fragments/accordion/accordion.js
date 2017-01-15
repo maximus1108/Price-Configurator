@@ -3,9 +3,7 @@ define(["knockout", "text!./accordion.html", "css!./accordion.css"],
 
 		function Accordion(params){
 			var self = this;
-
-			console.log(params)
-
+			
 			self.heading = ko.observable(params && params.heading || "");
 
 			self.isActive = ko.observable(false);
@@ -16,12 +14,16 @@ define(["knockout", "text!./accordion.html", "css!./accordion.css"],
 
 				var children = params.children, comp;
 				for(var i = 0; i < children.length; i++){
+					
+					children[i].props.app = params.app;
+					
 					comp = {
 						component:{
 							name: children[i].type + "-component",
 							params: children[i].props
 						}
 					}
+					
 					self.components.push(comp);
 				}
 			}

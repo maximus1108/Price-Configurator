@@ -9,8 +9,10 @@ define(["knockout", "pagevm"],
 
 			var self = this;
 			self.app = app;
-
+			
 			self.uicomponents = ko.observableArray();
+			
+			self.allCosts = ko.observableArray();
 
 			var uicomps = app.components.ui;
 
@@ -20,10 +22,10 @@ define(["knockout", "pagevm"],
 					component : {
 						name : uicomps[comp].name,
 						params : {
-							app : app,
-							props : {}
-						}
-					}
+							app : app					
+						}						
+					},
+					className: uicomps[comp].name
 				})
 			}
 			

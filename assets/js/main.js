@@ -9,7 +9,7 @@ requirejs.config({
 		application: "js/core/application",
 		mastervm: "js/core/mastervm",
 		pagevm: "js/core/pagevm"
-	},
+	}
 });
 
 requirejs(

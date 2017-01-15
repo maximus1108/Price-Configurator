@@ -4,9 +4,12 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
-		<div id='wrapper' data-bind="foreach: $root.uicomponents">
-			<div data-bind="component: component"></div>
-		</div>
+		<!--<div id='wrapper' data-bind="foreach: $root.uicomponents">-->
+			<!-- ko foreach: $root.uicomponents -->
+			<!-- ko component: component -->
+			<!-- /ko -->
+			<!-- /ko -->
+		<!--</div>-->
 	</body>
 	<script data-main="assets/js/main.js" type="text/javascript" src="assets/js/libs/require/require.js"></script>
 </html>

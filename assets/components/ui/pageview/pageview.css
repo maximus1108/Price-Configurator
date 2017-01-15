@@ -1,0 +1,12 @@
+.pageview{
+	position: absolute;
+	bottom: 70px;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	padding: 10px 10px 0px;
+	
+
+	overflow: auto;
+	/*margin: 10px;*/
+}

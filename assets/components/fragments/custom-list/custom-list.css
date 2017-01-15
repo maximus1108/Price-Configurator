@@ -1,0 +1,16 @@
+.custom-list {
+	display: block;
+}
+
+.custom-list > .item {
+	padding-bottom: 5px;
+	display: flex;
+}
+
+.custom-list > .item > div{
+	display: inline;
+}
+
+.custom-list > .item  > .symbol {
+	padding: 0px 5px;
+}

@@ -28,8 +28,8 @@ define(
 			self.pages = data.pages;
 
 			var components = data.components,
-			currentGroup,
-			component;
+				currentGroup,
+				component;
 
 			for (var prop in components) {
 
@@ -40,7 +40,7 @@ define(
 				for (var i = 0; i < currentGroup.length; i++) {
 					component = currentGroup[i]
 
-						self.components[prop][component] = {
+					self.components[prop][component] = {
 						name : component + "-component",
 						path : "components/" + prop + "/" + component + "/" + component
 					};
@@ -51,9 +51,12 @@ define(
 
 				}
 			}
-
+			
+			document.title = data.title;
+			
 			self.createMastervm();
-
+			
+			self.gotoPage(self.currentPageIndex);
 		}
 
 		Application.prototype.createMastervm = function () {
@@ -84,7 +87,9 @@ define(
 
 			for (var i = 0; i < pageBody.length; i++) {
 				pageComponent = pageBody[i];
-
+				
+				pageComponent.props && (pageComponent.props.app = self);
+				
 				var component = {
 					component : {
 						name : fragments[pageComponent.type].name,

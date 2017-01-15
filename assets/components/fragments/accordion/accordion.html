@@ -1,5 +1,5 @@
 <div class="accordion">
-		<div class="header" data-bind="click: showContent">
+		<div class="header" data-bind="click: showContent, css: {active: isActive()}">
 				<span data-bind="text: heading"></span>
 				<div class="icon">
 					<div class="left-line" data-bind="css: {active: isActive()}"></div>
@@ -8,7 +8,8 @@
 		</div>
 		<div class="body" data-bind="css: {active: isActive()}">
 			<div class="container" data-bind="foreach: components">
-				<div class="child-component" data-bind="component: component"></div>
+				<!-- ko component: component -->
+				<!-- /ko -->
 			</div>
 		</div>
 </div>

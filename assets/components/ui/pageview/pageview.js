@@ -1,14 +1,15 @@
-define(["knockout", "text!./pageview.html"],
-	function (ko, html) {
+define(["knockout", "text!./pageview.html", "css!./pageview.css"],
+	function (ko, html, css) {
 
 		function PageViewModel(params) {
-
+			
 			var self = this;
+
 			var app = params.app;
 
 			self.components = app.mastervm.pagevm.components;
-
-			app.gotoPage(app.currentPageIndex);
+			
+			self.className = ko.observable(params.className);					
 
 		}
 
