@@ -1,0 +1,331 @@
+[{
+    "title": "Price Configurator",
+    "components": {
+        "ui": [
+            "pageview",
+            "footer"
+        ],
+        "fragments": [
+            "accordion",
+            "feature-section",
+            "custom-list",
+            "form",
+            "checkbox",
+            "dropdown",
+            "radio-button",
+            "slider",
+            "textbox"
+        ]
+    },
+    "pages": [{
+        "heading": "Configurator",
+        "body": [{
+            "type": "accordion",
+            "props": {
+                "heading": "/standard features",
+                "text": "",
+                "children": [{
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/branding",
+                        "text": "",
+                        "children": [{
+                            "type": "custom-list",
+                            "props": {
+                                "symbol": "1x",
+                                "items": [
+                                    "logo",
+                                    "text colour",
+                                    "text box colour",
+                                    "interaction colour",
+                                    "instruction colour",
+                                    "font type (arial regular)"
+                                ]
+                            }
+                        }]
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/navigation",
+                        "text": "",
+                        "children": [{
+                            "type": "custom-list",
+                            "props": {
+                                "symbol": "1x",
+                                "items": [
+                                    "menu button",
+                                    "back button",
+                                    "next button",
+                                    "help button",
+                                    "glossary button",
+                                    "additional resources button"
+                                ]
+                            }
+                        }]
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/content",
+                        "text": "",
+                        "children": [{
+                            "type": "custom-list",
+                            "props": {
+                                "symbol": "1x",
+                                "items": [
+                                    "getting started tutorial/help slide",
+                                    "menu",
+                                    "glossary slide",
+                                    "additional resource slide",
+                                    "results slide (total score, percentage and tick/cross per question)"
+                                ]
+                            }
+                        }]
+                    }
+                }]
+            }
+        }, {
+            "type": "accordion",
+            "props": {
+                "heading": "/structure & functionality",
+                "text": "",
+                "children": [{
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/language(s)",
+                        "text": "",
+                        "children": [{
+                            "type": "form",
+                            "props": {
+                              "inputs": [{
+                                  "type": "checkbox",
+                                  "props": {
+                                    "cost": "2000",
+                                    "checked": "true",
+                                    "label": {
+                                        "text": "UK English",
+                                        "position": "after"
+                                    }
+                                  }
+                              }, {
+                                  "type": "checkbox",
+                                  "props": {
+                                    "cost": "2000",
+                                    "checked": "false",
+                                    "label": {
+                                        "text": "US English",
+                                        "position": "after"
+                                    }
+                                  }
+                              }, {
+                                  "type": "dropdown",
+                                  "props": {
+                                    "list": "true",
+                                    "options": [
+                                        {"text": "French","cost" :"2000"},
+                                        {"text": "German","cost" :"2000"},
+                                        {"text": "Spanish","cost" :"2000"},
+                                        {"text": "Chinese","cost" :"5000"}
+                                    ],
+                                    "label": {
+                                        "text": "other (please add below):",
+                                        "position": "before"
+                                    }
+                                  }
+                              }]
+                            }
+                          }]
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/course duration",
+                        "text": "",
+                        "children": [{
+                            "type": "form",
+                            "props": {
+                                "inputs": [{
+                                    "type": "slider",
+                                    "props": {
+                                      "cost": "1000",
+                                      "max": "100",
+                                      "min": "0.5",
+                                      "step": "0.5",
+                                      "label": {
+                                          "unit": "hrs",
+                                          "position": "after",
+                                          "width": "60"
+                                      }
+                                  }
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/questions",
+                        "text": "",
+                        "children": [{
+                            "type": "form",
+                            "props": {
+                              "inputs": [{
+                                  "type": "slider",
+                                  "props": {
+                                    "title": "formative (not tracked)",
+                                    "cost": "200",
+                                    "max": "10",
+                                    "min": "0",
+                                    "step": "1",
+                                    "label": {
+                                        "unit": "",
+                                        "position": "after",
+                                        "width": "20"
+                                    }
+                                }
+                              }, {
+                                  "type": "slider",
+                                  "props": {
+                                    "title": "summative (tracked assessment)",
+                                    "cost": "200",
+                                    "max": "10",
+                                    "min": "0",
+                                    "step": "1",
+                                    "label": {
+                                        "unit": "",
+                                        "position": "after",
+                                        "width": "20"
+                                    }
+                                  }
+                              }, {
+                                  "type": "slider",
+                                  "props": {
+                                    "title": "assessment attempts",
+                                    "cost": "100",
+                                    "max": "3",
+                                    "min": "0",
+                                    "step": "1",
+                                    "label": {
+                                        "unit": "",
+                                        "position": "after",
+                                        "width": "20"
+                                    }
+                                }
+                              }, {
+                                  "type": "checkbox",
+                                  "props": {
+                                    "cost": "500",
+                                    "checked": "false",
+                                    "label": {
+                                        "text": "bank/randomised",
+                                        "position": "after"
+                                    }
+                                  }
+                              }, {
+                                  "type": "checkbox",
+                                  "props": {
+                                    "cost": "500",
+                                    "checked": "false",
+                                    "label": {
+                                        "text": "results (tabular/info-graphic)",
+                                        "position": "after"
+                                    }
+                                  }
+                              }, {
+                                  "type": "checkbox",
+                                  "props": {
+                                    "cost": "1000",
+                                    "checked": "false",
+                                    "label": {
+                                        "text": "certificate",
+                                        "position": "after"
+                                  }
+                                }
+                              }]
+                            }
+                        }]
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/navigation",
+                        "text": "",
+                        "children": [{
+                            "type": "form",
+                            "props": {
+                                "inputs": [{
+                                    "type": "radio-button",
+                                    "props": {
+  																		"default": "linear",
+  																		"name": "navigation",
+  																		"buttons": [{
+  																			"text": "linear (locked)",
+  																			"position": "after",
+  																			"value": "linear",
+  																			"cost": "500"
+  																		  }, {
+  																			"text": "non-linear (unlocked)",
+  																			"position": "after",
+  																			"value": "",
+  																			"cost": "500"
+  																		}]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/additional functionality",
+                        "text": "",
+                        "children": []
+                    }
+                }]
+            }
+        }, {
+            "type": "accordion",
+            "props": {
+                "heading": "/design & content",
+                "text": "",
+                "children": [{
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/questions",
+                        "text": "",
+                        "children": []
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/navigation",
+                        "text": "",
+                        "children": []
+                    }
+                }]
+            }
+        }, {
+            "type": "accordion",
+            "props": {
+                "heading": "/device & platform",
+                "text": "",
+                "children": [{
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/questions",
+                        "text": "",
+                        "children": []
+                    }
+                }, {
+                    "type": "feature-section",
+                    "props": {
+                        "heading": "/navigation",
+                        "text": "",
+                        "children": []
+                    }
+                }]
+            }
+        }]
+    }]
+}]
